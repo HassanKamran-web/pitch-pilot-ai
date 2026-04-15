@@ -22,10 +22,10 @@ export const AuthProvider = ({ children }) => {
           }
         }
       )
-if (response.status === 200){
-  setUser(response.data.user)
+      if (response.status === 200) {
+        setUser(response.data.user)
 
-}
+      }
     } catch (error) {
       setUser(null)
       toast.error(error.response?.data?.message || "Auth error")
@@ -34,18 +34,17 @@ if (response.status === 200){
     }
   }
   const logout = () => {
-  localStorage.removeItem("token")
-  setUser(null)
-  setToken(null)
-}
+    localStorage.removeItem("token")
+    setUser(null)
+    setToken(null)
+  }
   useEffect(() => {
-    if (user){
-      if(window.location.pathname === "/login" || window.location.pathname === "/signup" || window.location.pathname === "/"){
-        navigate('/dashboard')
-      }
-    }
+    const publicPaths = ["/", "/login", "/signup"];
 
-}, [user])
+    if (user && publicPaths.includes(window.location.pathname)) {
+      navigate('/dashboard');
+    }
+  }, [user, navigate]);
 
   useEffect(() => {
     if (token) {
@@ -57,7 +56,7 @@ if (response.status === 200){
   }, [token])
 
   return (
-    <AuthContext.Provider value={{ user, setUser,setLoading, loading, setToken, token, logout }}>
+    <AuthContext.Provider value={{ user, setUser, setLoading, loading, setToken, token, logout }}>
       {children}
     </AuthContext.Provider>
   )
