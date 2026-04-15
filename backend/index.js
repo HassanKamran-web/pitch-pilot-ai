@@ -12,7 +12,12 @@ const leadRoutes = require('./routes/lead.route');
 const paymentRoutes = require('./routes/payment.route')
 const webhookRoutes = require('./routes/webhook.route')
 
-app.use(cors());
+app.use(cors({
+  origin: process.env.FRONTEND_URL,
+  methods: ["GET", "POST"],
+  credentials: true,
+
+}));
 app.use('/api/webhook', webhookRoutes);
 app.use(express.json());
 
@@ -24,6 +29,4 @@ app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on PORT ${PORT}`);
-});
+app.listen(PORT);

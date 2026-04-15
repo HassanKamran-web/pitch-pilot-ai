@@ -111,11 +111,7 @@ const Upload = () => {
 
   return (
     <div className="p-4 md:p-8">
-      {
-        loading && (
-          <LoadingScreen/>
-        )
-      }
+
       <div className="flex flex-col lg:flex-row mb-2 items-center justify-between">
         <h1 className="text-2xl font-bold mb-6">Upload Leads CSV</h1>
         <Filter qualityFilter={qualityFilter} setQualityFilter={setQualityFilter} statusFilter={statusFilter} setStatusFilter={setStatusFilter} search={search} setSearch={setSearch} leads={leads} setLeads={setLeads} />
@@ -177,9 +173,19 @@ const Upload = () => {
           <tbody>
             {leads.length === 0 ? (
               <tr>
-                <td colSpan={6} className="text-center py-4 text-gray-500">
-                  No leads uploaded yet
-                </td>
+                {
+                  loading ? (
+
+                    <td colSpan={6} className="text-center py-4 text-gray-500">
+                      Fetching Leads...
+                    </td>
+                  ) : (
+                    <td colSpan={6} className="text-center py-4 text-gray-500">
+                      No leads uploaded yet
+                    </td>
+
+                  )
+                }
               </tr>
             ) : (
               Array.isArray(leads) && (
