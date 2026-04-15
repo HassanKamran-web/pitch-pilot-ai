@@ -5,7 +5,9 @@ import LoadingScreen from "../Components/LoadingScreen"
 const ProtectedRouteWrapper = ({ children }) => {
   const { user, loading } = useAuth()
 
-  if (loading) return <LoadingScreen/>
+  if (loading) {
+    return <LoadingScreen/>
+  }
 
   if (!user) return <Navigate to="/" replace />
 

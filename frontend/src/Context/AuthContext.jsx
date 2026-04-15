@@ -51,7 +51,6 @@ export const AuthProvider = ({ children }) => {
     if (token) {
       getUserData()
     } else {
-      setUser(null)
       setLoading(false)
     }
   }, [token])
