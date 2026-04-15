@@ -43,7 +43,8 @@ const LoadingScreen = () => {
           justifyContent: 'center',
         }}
       >
-        <LoaderCircle size={60} strokeWidth={1.5} />
+        {/* <LoaderCircle size={60} strokeWidth={1.5} /> */}
+        <img className='w-12 h-12' src="/favicon.png" alt="Pitch-Pilot"/>
       </motion.div>
 
       {/* Loading Text */}
