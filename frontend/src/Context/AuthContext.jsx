@@ -50,9 +50,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     if (token) {
       getUserData()
-    } else {
-      setLoading(false)
-    }
+    } 
   }, [token])
 
   return (
