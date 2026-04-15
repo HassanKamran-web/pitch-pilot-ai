@@ -60,12 +60,12 @@ const Profile = () => {
 
               <p>
                 <span className="text-slate-400">Plan:</span>{" "}
-                {user.plan || "Free"}
+                {user?.plans || "Free"}
               </p>
 
               <p>
                 <span className="text-slate-400">Credits:</span>{" "}
-                {user.credits}
+                {user?.credits}
               </p>
 
             </div>
