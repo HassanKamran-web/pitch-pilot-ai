@@ -95,7 +95,7 @@ const Login = () => {
 
                     <button
                         type="submit"
-                        className="w-full focus-within:outline-none hover:bg-linear-to-r from-orange-600 to-red-700 bg-orange-600 text-white py-2 rounded-lg font-semibold hover:opacity-90 transition"
+                        className="w-full cursor-pointer focus-within:outline-none hover:bg-linear-to-r from-orange-600 to-red-700 bg-orange-600 text-white py-2 rounded-lg font-semibold hover:opacity-90 transition"
                     >
                         Login
                     </button>
@@ -104,7 +104,7 @@ const Login = () => {
             
                 <p className="text-slate-400 text-sm text-center mt-6">
                     Don’t have an account?{" "}
-                    <Link to="/register" className="text-orange-500 hover:underline">
+                    <Link to="/register" className="text-orange-500 cursor-pointer hover:underline">
                         Create one
                     </Link>
                 </p>

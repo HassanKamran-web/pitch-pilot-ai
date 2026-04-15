@@ -60,7 +60,7 @@ const Navbar = () => {
           </Link>
 
           <Link to="/register" onClick={() => setMenuOpen(false)}>
-            <button className="w-full mt-2 px-4 py-2 rounded-md bg-orange-500 hover:bg-orange-600 transition">
+            <button className="w-full mt-2 px-4 py-2 cursor-pointer rounded-md bg-orange-500 hover:bg-orange-600 transition">
               Get Started
             </button>
           </Link>

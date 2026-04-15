@@ -94,7 +94,7 @@ const Register = () => {
 
                     <button
                         type="submit"
-                        className="w-full hover:bg-linear-to-l from-orange-600 to-red-700 bg-orange-600 text-white py-2 rounded-lg font-semibold hover:opacity-90 transition"
+                        className="w-full hover:bg-linear-to-l cursor-pointer from-orange-600 to-red-700 bg-orange-600 text-white py-2 rounded-lg font-semibold hover:opacity-90 transition"
                     >
                         Create Account
                     </button>
