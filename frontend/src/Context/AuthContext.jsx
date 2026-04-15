@@ -13,6 +13,7 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true)
 
   const getUserData = async () => {
+    setLoading(true)
     try {
       const response = await axios.get(
         `${import.meta.env.VITE_BASE_URL}/api/user/profile`,
