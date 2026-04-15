@@ -51,10 +51,10 @@ const Dashboard = () => {
   return (
     <div className='flex h-screen text-white bg-slate-950'>
       
-      {/* Sidebar */}
+    
       <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 
-      {/* Main content */}
+      
       <div className='flex flex-col flex-1 h-screen overflow-auto'>
         <DashboardNav setSidebarOpen={setSidebarOpen} />
 
@@ -68,25 +68,25 @@ const Dashboard = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-        {/* Total Leads */}
+        
         <div className="bg-slate-900 border-2 border-white rounded-xl shadow p-6">
           <h2 className="text-white  text-sm">Total Leads</h2>
           <p className="text-3xl font-bold mt-2">{data.totalLeads}</p>
         </div>
 
-        {/* High Quality */}
+      
         <div className="bg-slate-900 border-2 border-green-400 rounded-xl shadow p-6">
           <h2 className="text-green-700 text-sm">High Quality</h2>
           <p className="text-3xl font-bold mt-2">{data.high}</p>
         </div>
 
-        {/* Medium Quality */}
+      
         <div className="bg-slate-900 border-2 border-yellow-400 rounded-xl shadow p-6">
           <h2 className="text-yellow-700 text-sm">Medium Quality</h2>
           <p className="text-3xl font-bold mt-2">{data.medium}</p>
         </div>
 
-        {/* Low Quality */}
+        
         <div className="bg-slate-900 border-2 border-red-400 rounded-xl shadow p-6">
           <h2 className="text-red-700 text-sm">Low Quality</h2>
           <p className="text-3xl font-bold mt-2">{data.low}</p>

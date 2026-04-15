@@ -1,10 +1,6 @@
-// components/LoadingScreen.jsx
 import { motion } from 'framer-motion';
-import { LoaderCircle } from 'lucide-react'; // Tum loader icon use kar sakte ho ya apni branding
+import { LoaderCircle } from 'lucide-react';
 
-// Colors from user:
-// Background: #020618
-// Primary/Buttons: #F54900
 
 const LoadingScreen = () => {
   return (
@@ -25,29 +21,28 @@ const LoadingScreen = () => {
         fontFamily: 'sans-serif',
       }}
     >
-      {/* Icon with Pulse Animation */}
+      
       <motion.div
         animate={{
-          scale: [1, 1.2, 1], // Scales up and down
-          opacity: [1, 0.5, 1], // Fades in and out
+          scale: [1, 1.2, 1],
+          opacity: [1, 0.5, 1],
         }}
         transition={{
           duration: 1.5,
-          repeat: Infinity, // Constant loop
+          repeat: Infinity,
           ease: "easeInOut"
         }}
         style={{
-          color: '#F54900', // Primary orange
+          color: '#F54900',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
         }}
       >
-        {/* <LoaderCircle size={60} strokeWidth={1.5} /> */}
-        <img className='w-12 h-12' src="/favicon.png" alt="Pitch-Pilot"/>
+        <LoaderCircle size={60} strokeWidth={1.5} />
       </motion.div>
 
-      {/* Loading Text */}
+      
       <motion.p
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}

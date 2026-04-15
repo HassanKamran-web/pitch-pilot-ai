@@ -9,13 +9,13 @@ const Navbar = () => {
     <header className="border-b border-slate-800 bg-slate-950">
       <nav className="h-20 max-w-7xl mx-auto px-4 flex items-center justify-between">
 
-        {/* Logo */}
+    
         <div className="flex items-center gap-3">
           <img className="w-10" src="./favicon.png" alt="logo" />
           <h1 className="text-white font-bold text-lg">PitchPilot</h1>
         </div>
 
-        {/* Desktop Menu */}
+        
         <ul className="hidden md:flex items-center gap-8 text-white font-medium">
           <a href="#feature" className="cursor-pointer hover:text-gray-300 transition">
             Features
@@ -40,7 +40,7 @@ const Navbar = () => {
           </Link>
         </ul>
 
-        {/* Mobile Hamburger */}
+        
         <button
           className="md:hidden text-white"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -49,7 +49,7 @@ const Navbar = () => {
         </button>
       </nav>
 
-      {/* Mobile Menu */}
+    
       {menuOpen && (
         <div className="md:hidden bg-slate-950 border-t border-slate-800 px-6 py-4 space-y-4 text-white">
           <p className="cursor-pointer hover:text-gray-300">Features</p>

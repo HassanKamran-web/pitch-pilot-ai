@@ -123,7 +123,7 @@ const Upload = () => {
         </p>
       </div>
 
-      {/* Upload Area */}
+      
       <div
         className={`border-2 border-dashed p-6 flex flex-col items-center justify-center rounded-lg mb-6 cursor-pointer text-center transition-colors ${dragOver ? "border-orange-500 bg-slate-800" : "border-gray-300 bg-slate-900/50"
           }`}
@@ -148,7 +148,7 @@ const Upload = () => {
         {file && <p className="mt-2 text-green-600">{file.name}</p>}
       </div>
 
-      {/* Upload Button */}
+    
       <button
         onClick={handleUpload}
         disabled={loading}
@@ -157,7 +157,7 @@ const Upload = () => {
         {loading ? "Uploading..." : "Upload CSV"}
       </button>
 
-      {/* Leads Table */}
+      
       <div className="mt-8 overflow-x-auto">
         <table className="min-w-full border rounded-lg overflow-hidden">
           <thead className="bg-slate-900/50">

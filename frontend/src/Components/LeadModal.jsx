@@ -44,10 +44,10 @@ const LeadModal = ({ isOpen, onClose, lead }) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4">
 
-      {/* Modal Box */}
+      
       <div className="w-full max-w-2xl rounded-xl bg-slate-950 border overflow-hidden scroll-none border-slate-800 shadow-xl p-6 relative max-h-[90vh] overflow-y-auto">
 
-        {/* Close Button */}
+        
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-slate-400 hover:text-white cursor-pointer"
@@ -55,12 +55,12 @@ const LeadModal = ({ isOpen, onClose, lead }) => {
           ✕
         </button>
 
-        {/* Title */}
+  
         <h2 className="text-xl font-semibold text-white mb-6">
           Lead Details
         </h2>
 
-        {/* Lead Info */}
+      
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
 
           <div>
@@ -85,7 +85,7 @@ const LeadModal = ({ isOpen, onClose, lead }) => {
 
         </div>
 
-        {/* Subject */}
+      
         <div className="mb-6">
           <p className="text-slate-400 text-sm mb-2">Email Subject</p>
 
@@ -104,7 +104,7 @@ const LeadModal = ({ isOpen, onClose, lead }) => {
           </div>
         </div>
 
-        {/* Email Content */}
+        
         <div>
           <p className="text-slate-400 text-sm mb-2">Email Content</p>
 

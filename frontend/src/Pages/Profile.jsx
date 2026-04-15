@@ -26,7 +26,7 @@ const Profile = () => {
 
         <div className="grid md:grid-cols-2 gap-6">
 
-          {/* User Info */}
+        
           <div className="bg-slate-900 p-6 rounded-xl border border-slate-800">
 
             <h2 className="text-xl font-semibold mb-4">
@@ -49,7 +49,7 @@ const Profile = () => {
 
           </div>
 
-          {/* Plan Info */}
+        
           <div className="bg-slate-900 p-6 flex flex-col rounded-xl border border-slate-800">
 
             <h2 className="text-xl font-semibold mb-4">

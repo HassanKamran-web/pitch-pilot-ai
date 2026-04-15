@@ -38,7 +38,7 @@ const Pricing = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mt-14">
 
-        {/* FREE PLAN */}
+    
 
         <div className="bg-slate-900 p-8 rounded-2xl flex flex-col border border-slate-800">
 
@@ -66,7 +66,7 @@ const Pricing = () => {
         </div>
 
 
-        {/* PRO PLAN */}
+        
 
         <div className="bg-slate-900 p-8 rounded-2xl border border-orange-500 relative">
 
@@ -98,7 +98,7 @@ const Pricing = () => {
         </div>
 
 
-        {/* PREMIUM PLAN */}
+      
 
         <div className="bg-slate-900 p-8 rounded-2xl border border-slate-800">
 

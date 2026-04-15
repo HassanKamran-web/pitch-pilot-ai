@@ -6,11 +6,11 @@ const LandingPage = () => {
     return (
         <div className="min-h-screen bg-slate-950 text-white">
 
-            {/* HERO SECTION */}
+            
 
             <section className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-10 items-center">
 
-                {/* LEFT */}
+        
 
                 <div>
 
@@ -34,7 +34,7 @@ const LandingPage = () => {
 
                 </div>
 
-                {/* RIGHT ANIMATED CARDS */}
+                
 
                 <div className="relative h-87.5">
 
@@ -71,7 +71,7 @@ const LandingPage = () => {
 
             </section>
 
-            {/* FEATURES */}
+            
 
             <section id="feature" className="max-w-7xl mx-auto px-6 py-20">
 
@@ -106,7 +106,7 @@ const LandingPage = () => {
 
             </section>
 
-             {/* PRICING */}
+             
 
             <section id="pricing" className="max-w-7xl mx-auto px-6 py-24">
 
@@ -120,7 +120,7 @@ const LandingPage = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mt-14">
 
-                    {/* FREE PLAN */}
+                    
 
                     <div className="bg-slate-900 p-8 rounded-2xl flex flex-col border border-slate-800">
 
@@ -148,7 +148,7 @@ const LandingPage = () => {
                     </div>
 
 
-                    {/* PRO PLAN */}
+                    
 
                     <div className="bg-slate-900 p-8 rounded-2xl border flex flex-col border-orange-500 relative">
 
@@ -180,7 +180,7 @@ const LandingPage = () => {
                     </div>
 
 
-                    {/* PREMIUM PLAN */}
+                    
 
                     <div className="bg-slate-900 p-8 rounded-2xl border flex flex-col border-slate-800">
 
@@ -211,7 +211,7 @@ const LandingPage = () => {
 
             </section>
 
-            {/* HOW IT WORKS */}
+            
 
             <section id="howitsworks" className="bg-slate-900 py-20">
 
@@ -250,7 +250,7 @@ const LandingPage = () => {
 
             </section>
 
-            {/* CTA */}
+
 
             <section className="py-20 text-center flex flex-col items-center gap-3">
 
@@ -264,7 +264,7 @@ const LandingPage = () => {
 
             </section>
 
-            {/* FOOTER */}
+            
 
             <footer className="border-t border-slate-800 py-6 text-center text-slate-500">
                 © 2025 Pitch Pilot. All rights reserved.

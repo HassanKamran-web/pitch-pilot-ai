@@ -47,7 +47,7 @@ const Login = () => {
                 <Link to="/">
                     <img className="w-10 h-10 mx-auto cursor-pointer" src="./favicon.png" alt="logo" />
                 </Link>
-                {/* Logo / Title */}
+                
                 <h1 className="text-3xl font-bold text-white text-center mb-2">
                     PitchPilot AI
                 </h1>
@@ -55,7 +55,7 @@ const Login = () => {
                     Welcome back. Login to continue.
                 </p>
 
-                {/* Form */}
+                
                 <form onSubmit={(e) => { submitHandler(e) }} className="space-y-5">
                     <div>
                         <label className="block text-sm text-slate-400 mb-1">
@@ -101,7 +101,7 @@ const Login = () => {
                     </button>
                 </form>
 
-                {/* Footer */}
+                {
                 <p className="text-slate-400 text-sm text-center mt-6">
                     Don’t have an account?{" "}
                     <Link to="/register" className="text-orange-500 hover:underline">

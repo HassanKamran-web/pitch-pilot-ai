@@ -104,7 +104,7 @@ const Results = () => {
       </div>
 
 
-      {/* Leads Table */}
+    
       <div className="mt-8 overflow-x-auto  ">
         <table className="min-w-full border rounded-lg overflow-hidden">
           <thead className="bg-slate-900/50">

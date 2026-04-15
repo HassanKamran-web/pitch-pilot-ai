@@ -8,10 +8,10 @@ const DashboardNav = ({ setSidebarOpen }) => {
     return (
         <header className='flex items-center justify-end py-2 px-4 border-b border-slate-800 bg-slate-950'>
             
-            {/* Hamburger for mobile */}
+        
             <MdMenu className='md:hidden text-2xl cursor-pointer' onClick={()=>setSidebarOpen(prev=>!prev)} />
 
-            {/* Desktop: credits / plan / name */}
+            
             <div className='hidden md:flex w-full items-center justify-end gap-4'>
                 <div className='rounded-md bg-slate-800/50 p-3 flex flex-col items-center'>
                     <span className='text-xs'>Remaining Credits</span>

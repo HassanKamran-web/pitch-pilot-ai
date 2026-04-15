@@ -37,7 +37,7 @@ const Register = () => {
                 <Link to="/">
                     <img className="w-10 h-10 mx-auto cursor-pointer" src="./favicon.png" alt="logo" />
                 </Link>
-                {/* Title */}
+            
                 <h1 className="text-3xl font-bold text-white text-center mb-2">
 
                     Create Account
@@ -46,7 +46,7 @@ const Register = () => {
                     Get 100 free credits instantly 🚀
                 </p>
 
-                {/* Form */}
+                
                 <form onSubmit={(e) => { submitHandler(e) }} className="space-y-5">
                     <div>
                         <label className="block text-sm text-slate-400 mb-1">
