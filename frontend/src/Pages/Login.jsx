@@ -9,13 +9,14 @@ const Login = () => {
     const [showpassword, setShowpassword] = useState(false)
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const {setToken} = useAuth()
+    const { setToken } = useAuth()
+    const [loading, setLoading] = useState(false)
     const navigate = useNavigate()
 
 
     const submitHandler = async (e) => {
         e.preventDefault()
-
+        setLoading(true)
         try {
             if (!email || !password) return toast.error('All fields are required')
 
@@ -39,6 +40,8 @@ const Login = () => {
 
         } catch (err) {
             toast.error(err.response.data.message)
+        } finally {
+            setLoading(false)
         }
     }
     return (
@@ -47,7 +50,7 @@ const Login = () => {
                 <Link to="/">
                     <img className="w-10 h-10 mx-auto cursor-pointer" src="./favicon.png" alt="logo" />
                 </Link>
-                
+
                 <h1 className="text-3xl font-bold text-white text-center mb-2">
                     PitchPilot AI
                 </h1>
@@ -55,7 +58,7 @@ const Login = () => {
                     Welcome back. Login to continue.
                 </p>
 
-                
+
                 <form onSubmit={(e) => { submitHandler(e) }} className="space-y-5">
                     <div>
                         <label className="block text-sm text-slate-400 mb-1">
@@ -97,11 +100,13 @@ const Login = () => {
                         type="submit"
                         className="w-full cursor-pointer focus-within:outline-none hover:bg-linear-to-r from-orange-600 to-red-700 bg-orange-600 text-white py-2 rounded-lg font-semibold hover:opacity-90 transition"
                     >
-                        Login
+                        {
+                            loading ? "Logging in..." : "Login"
+                        }
                     </button>
                 </form>
 
-            
+
                 <p className="text-slate-400 text-sm text-center mt-6">
                     Don’t have an account?{" "}
                     <Link to="/register" className="text-orange-500 cursor-pointer hover:underline">

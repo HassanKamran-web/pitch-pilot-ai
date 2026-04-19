@@ -9,13 +9,14 @@ const Upload = () => {
   const [dragOver, setDragOver] = useState(false);
   const [leads, setLeads] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [fetchloading, setFetchLoading] = useState(false)
   const { token, setUser, user } = useAuth();
   const [qualityFilter, setQualityFilter] = useState("")
   const [statusFilter, setStatusFilter] = useState("")
   const [search, setSearch] = useState("")
 
   const fetchLeads = async () => {
-    setLoading(true);
+    setFetchLoading(true);
     try {
       const response = await axios.get(
         `${import.meta.env.VITE_BASE_URL}/api/leads/`,
@@ -35,7 +36,7 @@ const Upload = () => {
     } catch (err) {
       toast.error("Failed to fetch leads");
     } finally {
-      setLoading(false);
+      setFetchLoading(false);
     }
   };
 
@@ -174,7 +175,7 @@ const Upload = () => {
             {leads.length === 0 ? (
               <tr>
                 {
-                  loading ? (
+                  fetchloading ? (
 
                     <td colSpan={6} className="text-center py-4 text-gray-500">
                       Fetching Leads...

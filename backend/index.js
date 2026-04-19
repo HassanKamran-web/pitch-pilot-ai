@@ -11,15 +11,18 @@ const userRoutes = require('./routes/user.route');
 const leadRoutes = require('./routes/lead.route');
 const paymentRoutes = require('./routes/payment.route')
 const webhookRoutes = require('./routes/webhook.route')
+const compression = require('compression');
 
+app.use(compression());
 app.use(cors({
   origin: process.env.FRONTEND_URL,
   methods: ["GET", "POST"],
   credentials: true,
-
+  
 }));
 app.use('/api/webhook', webhookRoutes);
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.use('/api/auth/user', authRoutes)
 app.use('/api/user', userRoutes)
@@ -30,3 +33,4 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT);
+module.exports = app;

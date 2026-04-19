@@ -82,7 +82,7 @@ const uploadLeads = async (req, res) => {
 const getLeads = async (req, res) => {
   try {
     const user = await userModel.findOne({ _id: req.user.userId });
-    const leads = await Lead.find({ userId: req.user.userId }).sort({ createdAt: -1 });
+    const leads = await Lead.find({ userId: req.user.userId }).sort({ createdAt: -1 }).lean();
     if (!leads) {
       return res.status(400).json({ message: "No leads found" });
     }

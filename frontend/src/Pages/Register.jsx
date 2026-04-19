@@ -11,11 +11,12 @@ const Register = () => {
     const [email, setEmail] = useState('')
     const [name, setName] = useState('')
     const [password, setPassword] = useState('')
+    const [loading, setLoading] = useState(false)
     const navigate = useNavigate()
 
     const submitHandler = async (e) => {
         e.preventDefault()
-
+        setLoading(true)
         try{
             if(!name || !email || !password) return toast.error('All fields are required')
             const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/api/auth/user/register`, {name, email, password})
@@ -29,6 +30,8 @@ const Register = () => {
             }
         }catch(err){
             toast.error(err.response.data.message)
+        }finally{
+            setLoading(false)
         }
     }
     return (
@@ -96,7 +99,9 @@ const Register = () => {
                         type="submit"
                         className="w-full hover:bg-linear-to-l cursor-pointer from-orange-600 to-red-700 bg-orange-600 text-white py-2 rounded-lg font-semibold hover:opacity-90 transition"
                     >
-                        Create Account
+                        {
+                            loading ? "Creating Account..." : "Create Account"
+                        }
                     </button>
                 </form>
 
