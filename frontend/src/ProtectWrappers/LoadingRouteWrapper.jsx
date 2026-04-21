@@ -6,7 +6,6 @@ const LoadingRouteWrapper = ({ children }) => {
   const { user, loading } = useAuth()
 
   if (loading) {
-    console.log(loading)
     return <LoadingScreen/>
   }
 
