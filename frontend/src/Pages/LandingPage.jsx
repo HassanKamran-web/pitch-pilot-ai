@@ -87,7 +87,7 @@ const LandingPage = () => {
                     Powerful AI Features
                 </h2>
 
-                <div className="grid md:grid-cols-4 gap-8 mt-12">
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
 
                     <div className="bg-slate-900 p-6 rounded-xl">
                         <h3 className="text-lg font-semibold">Upload Leads</h3>
@@ -227,7 +227,7 @@ const LandingPage = () => {
                 <div className="max-w-6xl mx-auto px-6 text-center">
                     <h2 className="text-3xl font-bold">How It Works</h2>
 
-                    <div className="grid md:grid-cols-4 gap-8 mt-12">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mt-12">
 
                         <div className="flex flex-col gap-2 items-center rounded-lg  bg-slate-950 shadow-md shadow-slate-800/40   py-12 px-6">
                             <MdOutlineCloudUpload size={50} />
