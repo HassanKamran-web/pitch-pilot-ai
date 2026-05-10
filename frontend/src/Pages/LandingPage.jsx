@@ -1,16 +1,11 @@
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
-import { MdOutlineCloudUpload, MdOutlineDocumentScanner, MdInsights, MdCheck } from "react-icons/md";
+import { MdOutlineCloudUpload, MdOutlineDocumentScanner, MdInsights, MdCheck, MdOutlineHandshake  } from "react-icons/md";
 
 const LandingPage = () => {
     return (
         <div className="min-h-screen bg-slate-950 text-white">
-
-
-
             <section className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-10 items-center">
-
-
 
                 <div>
 
@@ -258,7 +253,7 @@ const LandingPage = () => {
                             </p>
                         </div>
                         <div className="flex flex-col gap-2 items-center rounded-lg bg-slate-950 shadow-md shadow-slate-800/40  py-12 px-6">
-                            <MdInsights size={50} />
+                            <MdOutlineHandshake size={50} />
                             <h3 className="text-xl font-semibold">4. Close the Deal.</h3>
                             <p className="text-slate-400 mt-2">
                                 Use AI-generated personalized emails to turn leads into customers.
