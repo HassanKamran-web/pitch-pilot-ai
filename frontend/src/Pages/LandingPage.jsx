@@ -38,7 +38,6 @@ const LandingPage = () => {
 
 
                 <div className="relative h-125 md:h-112.5 w-full max-w-lg mx-auto">
-                    {/* 1. Lead Score Card (Top Left) */}
                     <motion.div
                         animate={{ y: [0, -15, 0] }}
                         transition={{ repeat: Infinity, duration: 4 }}
@@ -47,9 +46,6 @@ const LandingPage = () => {
                         <h3 className="text-[10px] md:text-xs text-slate-400 font-medium">Lead Score</h3>
                         <p className="text-xl md:text-2xl font-extrabold text-green-400">92</p>
                     </motion.div>
-
-                    {/* 2. Quality Card (Top Right) */}
-                    {/* Mobile par top-20 kar diya taake overlap na ho */}
                     <motion.div
                         animate={{ y: [0, 15, 0] }}
                         transition={{ repeat: Infinity, duration: 5 }}
@@ -59,8 +55,6 @@ const LandingPage = () => {
                         <p className="text-base md:text-lg font-semibold text-indigo-400">High Potential</p>
                     </motion.div>
 
-                    {/* 3. AI Insight Card (Middle Left) */}
-                    {/* Mobile par top-48 kar diya */}
                     <motion.div
                         animate={{ y: [0, -10, 0] }}
                         transition={{ repeat: Infinity, duration: 6 }}
@@ -72,7 +66,6 @@ const LandingPage = () => {
                         </p>
                     </motion.div>
 
-                    {/* 4. Email Preview Card (Bottom Center/Right) */}
                     <motion.div
                         animate={{ y: [0, 20, 0] }}
                         transition={{ repeat: Infinity, duration: 7 }}
