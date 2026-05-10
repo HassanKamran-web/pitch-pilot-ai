@@ -6,22 +6,23 @@ const LandingPage = () => {
     return (
         <div className="min-h-screen bg-slate-950 text-white">
 
-            
+
 
             <section className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-10 items-center">
 
-        
+
 
                 <div>
 
                     <h1 className="text-4xl md:text-5xl font-bold leading-tight">
                         AI Powered
-                        <span className="text-orange-500"> Lead Analyzer</span>
+                        <span className="text-orange-500"> Lead Analyzer </span>
+                        &
+                        <span className="text-orange-500"> Outreach Engine</span>
                     </h1>
 
                     <p className="text-slate-400 mt-6">
-                        Upload your leads, analyze them with AI and find your
-                        highest converting prospects instantly.
+                        Score leads and generate personalized emails instantly.
                     </p>
 
                     <div className="flex gap-4 mt-8">
@@ -34,44 +35,63 @@ const LandingPage = () => {
 
                 </div>
 
-                
 
-                <div className="relative h-87.5">
 
+                <div className="relative h-125 md:h-112.5 w-full max-w-lg mx-auto">
+                    {/* 1. Lead Score Card (Top Left) */}
                     <motion.div
                         animate={{ y: [0, -15, 0] }}
                         transition={{ repeat: Infinity, duration: 4 }}
-                        className="absolute top-0 left-10 bg-slate-900 p-6 rounded-xl shadow-xl w-60"
+                        className="absolute top-0 left-2 md:-left-10 bg-slate-900 p-4 rounded-xl shadow-2xl border border-slate-800 w-40 md:w-56 z-10"
                     >
-                        <h3 className="text-sm text-slate-400">Lead Score</h3>
-                        <p className="text-2xl font-bold text-green-400">92</p>
+                        <h3 className="text-[10px] md:text-xs text-slate-400 font-medium">Lead Score</h3>
+                        <p className="text-xl md:text-2xl font-extrabold text-green-400">92</p>
                     </motion.div>
 
+                    {/* 2. Quality Card (Top Right) */}
+                    {/* Mobile par top-20 kar diya taake overlap na ho */}
                     <motion.div
                         animate={{ y: [0, 15, 0] }}
                         transition={{ repeat: Infinity, duration: 5 }}
-                        className="absolute top-28 right-10 bg-slate-900 p-6 rounded-xl shadow-xl w-60"
+                        className="absolute top-20 right-2 md:top-12 md:-right-10 bg-slate-900 p-4 rounded-xl shadow-2xl border border-slate-800 w-40 md:w-56 z-10"
                     >
-                        <h3 className="text-sm text-slate-400">Quality</h3>
-                        <p className="text-xl text-indigo-400">High Potential</p>
+                        <h3 className="text-[10px] md:text-xs text-slate-400 font-medium">Quality</h3>
+                        <p className="text-base md:text-lg font-semibold text-indigo-400">High Potential</p>
                     </motion.div>
 
+                    {/* 3. AI Insight Card (Middle Left) */}
+                    {/* Mobile par top-48 kar diya */}
                     <motion.div
                         animate={{ y: [0, -10, 0] }}
                         transition={{ repeat: Infinity, duration: 6 }}
-                        className="absolute bottom-0 left-20 bg-slate-900 p-6 rounded-xl shadow-xl w-60"
+                        className="absolute top-48 left-2 md:top-40 md:left-0 bg-slate-900 p-4 rounded-xl shadow-2xl border border-slate-800 w-48 md:w-60 z-20"
                     >
-                        <h3 className="text-sm text-slate-400">AI Insight</h3>
-                        <p className="text-sm">
+                        <h3 className="text-[10px] md:text-xs text-slate-400 font-medium">AI Insight</h3>
+                        <p className="text-[10px] md:text-xs text-slate-200 leading-relaxed mt-1">
                             This company shows strong buying signals.
                         </p>
                     </motion.div>
 
+                    {/* 4. Email Preview Card (Bottom Center/Right) */}
+                    <motion.div
+                        animate={{ y: [0, 20, 0] }}
+                        transition={{ repeat: Infinity, duration: 7 }}
+                        className="absolute bottom-10 right-2 md:right-0 bg-slate-900 p-4 md:p-5 rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-orange-500/30 w-56 md:w-72 z-30"
+                    >
+                        <div className="flex items-center justify-between mb-2">
+                            <h3 className="text-[9px] md:text-xs text-orange-400 font-bold uppercase tracking-wider">AI Outreach</h3>
+                            <div className="h-2 w-2 rounded-full bg-orange-500 animate-pulse"></div>
+                        </div>
+                        <h4 className="text-[10px] md:text-xs text-slate-100 font-semibold">To: John Doe</h4>
+                        <p className="text-[9px] md:text-[11px] text-slate-400 mt-2 leading-relaxed italic">
+                            "Hi John, I saw your post about SaaS architecture. PitchPilot could automate your qualification workflow..."
+                        </p>
+                    </motion.div>
                 </div>
 
             </section>
 
-            
+
 
             <section id="feature" className="max-w-7xl mx-auto px-6 py-20">
 
@@ -79,7 +99,7 @@ const LandingPage = () => {
                     Powerful AI Features
                 </h2>
 
-                <div className="grid md:grid-cols-3 gap-8 mt-12">
+                <div className="grid md:grid-cols-4 gap-8 mt-12">
 
                     <div className="bg-slate-900 p-6 rounded-xl">
                         <h3 className="text-lg font-semibold">Upload Leads</h3>
@@ -96,6 +116,13 @@ const LandingPage = () => {
                     </div>
 
                     <div className="bg-slate-900 p-6 rounded-xl">
+                        <h3 className="text-lg font-semibold">AI Personalized Outreach</h3>
+                        <p className="text-slate-400 mt-2">
+                            Generate high-converting emails for every lead with a single click
+                        </p>
+                    </div>
+
+                    <div className="bg-slate-900 p-6 rounded-xl">
                         <h3 className="text-lg font-semibold">Insights Dashboard</h3>
                         <p className="text-slate-400 mt-2">
                             See analytics and discover high value prospects.
@@ -106,7 +133,7 @@ const LandingPage = () => {
 
             </section>
 
-             
+
 
             <section id="pricing" className="max-w-7xl mx-auto px-6 py-24">
 
@@ -120,7 +147,7 @@ const LandingPage = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mt-14">
 
-                    
+
 
                     <div className="bg-slate-900 p-8 rounded-2xl flex flex-col border border-slate-800">
 
@@ -134,10 +161,10 @@ const LandingPage = () => {
 
                         <ul className="mt-6 space-y-3 text-slate-400">
 
-                            <li className="flex items-center gap-2 "><span className="text-orange-500 font-semibold"><MdCheck/></span> 100 Lead Analysis</li>
-                            <li className="flex items-center gap-2 "><span className="text-orange-500 font-semibold"><MdCheck/></span> AI Lead Scoring</li>
-                            <li className="flex items-center gap-2 "><span className="text-orange-500 font-semibold"><MdCheck/></span> Dashboard Insights</li>
-                            <li className="flex items-center gap-2 "><span className="text-orange-500 font-semibold"><MdCheck/></span> Smart Filtering</li>
+                            <li className="flex items-center gap-2 "><span className="text-orange-500 font-semibold"><MdCheck /></span> 100 Lead Analysis + AI Email Drafts</li>
+                            <li className="flex items-center gap-2 "><span className="text-orange-500 font-semibold"><MdCheck /></span> AI Lead Scoring</li>
+                            <li className="flex items-center gap-2 "><span className="text-orange-500 font-semibold"><MdCheck /></span> Dashboard Insights</li>
+                            <li className="flex items-center gap-2 "><span className="text-orange-500 font-semibold"><MdCheck /></span> Smart Filtering</li>
 
                         </ul>
 
@@ -146,9 +173,6 @@ const LandingPage = () => {
                         </Link>
 
                     </div>
-
-
-                    
 
                     <div className="bg-slate-900 p-8 rounded-2xl border flex flex-col border-orange-500 relative">
 
@@ -166,10 +190,10 @@ const LandingPage = () => {
 
                         <ul className="mt-6 space-y-3 text-slate-400">
 
-                            <li className="flex items-center gap-2"><span className="text-orange-500 font-bsemibold"><MdCheck/></span> 500 Lead Analysis</li>
-                            <li className="flex items-center gap-2 "><span className="text-orange-500 font-semibold"><MdCheck/></span> AI Lead Scoring</li>
-                            <li className="flex items-center gap-2 "><span className="text-orange-500 font-semibold"><MdCheck/></span> Advanced Insights</li>
-                            <li className="flex items-center gap-2 "><span className="text-orange-500 font-semibold"><MdCheck/></span> Smart Filtering</li>
+                            <li className="flex items-center gap-2"><span className="text-orange-500 font-bsemibold"><MdCheck /></span> 500 Lead Analysis + AI Email Drafts</li>
+                            <li className="flex items-center gap-2 "><span className="text-orange-500 font-semibold"><MdCheck /></span> AI Lead Scoring</li>
+                            <li className="flex items-center gap-2 "><span className="text-orange-500 font-semibold"><MdCheck /></span> Advanced Insights</li>
+                            <li className="flex items-center gap-2 "><span className="text-orange-500 font-semibold"><MdCheck /></span> Smart Filtering</li>
 
                         </ul>
 
@@ -178,9 +202,6 @@ const LandingPage = () => {
                         </Link>
 
                     </div>
-
-
-                    
 
                     <div className="bg-slate-900 p-8 rounded-2xl border flex flex-col border-slate-800">
 
@@ -194,10 +215,10 @@ const LandingPage = () => {
 
                         <ul className="mt-6 space-y-3 text-slate-400">
 
-                            <li className="flex items-center gap-2"><span className="text-orange-500"><MdCheck/></span> 1000 Lead Analysis</li>
-                            <li className="flex items-center gap-2"><span className="text-orange-500"><MdCheck/></span> AI Lead Scoring</li>
-                            <li className="flex items-center gap-2"><span className="text-orange-500"><MdCheck/></span> Advanced Insights</li>
-                            <li className="flex items-center gap-2"><span className="text-orange-500"><MdCheck/></span> Smart Filtering</li>
+                            <li className="flex items-center gap-2"><span className="text-orange-500"><MdCheck /></span> 1000 Lead Analysis + AI Email Drafts</li>
+                            <li className="flex items-center gap-2"><span className="text-orange-500"><MdCheck /></span> AI Lead Scoring</li>
+                            <li className="flex items-center gap-2"><span className="text-orange-500"><MdCheck /></span> Advanced Insights</li>
+                            <li className="flex items-center gap-2"><span className="text-orange-500"><MdCheck /></span> Smart Filtering</li>
 
                         </ul>
 
@@ -211,16 +232,16 @@ const LandingPage = () => {
 
             </section>
 
-            
 
-            <section id="howitsworks" className="bg-slate-900 py-20">
+
+            <section id="howitsworks" className="bg-slate-900/40 py-20">
 
                 <div className="max-w-6xl mx-auto px-6 text-center">
                     <h2 className="text-3xl font-bold">How It Works</h2>
 
-                    <div className="grid md:grid-cols-3 gap-10 mt-12">
+                    <div className="grid md:grid-cols-4 gap-8 mt-12">
 
-                        <div className="flex flex-col gap-2 items-center rounded-lg  bg-slate-950 shadow-md shadow-slate-800  py-12 px-6">
+                        <div className="flex flex-col gap-2 items-center rounded-lg  bg-slate-950 shadow-md shadow-slate-800/40   py-12 px-6">
                             <MdOutlineCloudUpload size={50} />
                             <h3 className="text-xl font-semibold">1. Upload CSV</h3>
                             <p className="text-slate-400 mt-2">
@@ -228,7 +249,7 @@ const LandingPage = () => {
                             </p>
                         </div>
 
-                        <div className="flex flex-col gap-2 items-center rounded-lg bg-slate-950 shadow-md shadow-slate-800 py-12 px-6">
+                        <div className="flex flex-col gap-2 items-center rounded-lg bg-slate-950 shadow-md shadow-slate-800/40  py-12 px-6">
                             <MdOutlineDocumentScanner size={50} />
                             <h3 className="text-xl font-semibold">2. AI Analysis</h3>
                             <p className="text-slate-400 mt-2">
@@ -236,11 +257,18 @@ const LandingPage = () => {
                             </p>
                         </div>
 
-                        <div className="flex flex-col gap-2 items-center rounded-lg bg-slate-950 shadow-md shadow-slate-800 py-12 px-6">
+                        <div className="flex flex-col gap-2 items-center rounded-lg bg-slate-950 shadow-md shadow-slate-800/40  py-12 px-6">
                             <MdInsights size={50} />
                             <h3 className="text-xl font-semibold">3. Get Insights</h3>
                             <p className="text-slate-400 mt-2">
                                 Discover high converting prospects.
+                            </p>
+                        </div>
+                        <div className="flex flex-col gap-2 items-center rounded-lg bg-slate-950 shadow-md shadow-slate-800/40  py-12 px-6">
+                            <MdInsights size={50} />
+                            <h3 className="text-xl font-semibold">4. Close the Deal.</h3>
+                            <p className="text-slate-400 mt-2">
+                                Use AI-generated personalized emails to turn leads into customers.
                             </p>
                         </div>
 
@@ -264,7 +292,7 @@ const LandingPage = () => {
 
             </section>
 
-            
+
 
             <footer className="border-t border-slate-800 py-6 text-center text-slate-500">
                 © 2025 Pitch Pilot. All rights reserved.
