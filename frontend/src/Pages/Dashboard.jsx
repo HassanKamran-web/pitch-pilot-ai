@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Outlet, useLocation, useNavigate } from 'react-router-dom'
 import Sidebar from '../Components/Sidebar'
 import axios from 'axios'
 import DashboardNav from '../Components/DashboardNav'
 import { useAuth } from '../Context/AuthContext'
 import toast from 'react-hot-toast'
-import { useEffect } from 'react'
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, Cell } from 'recharts';
 
 const Dashboard = () => {
@@ -35,10 +34,13 @@ const Dashboard = () => {
           headers: { Authorization: `Bearer ${token}` },
         }
       );
-      const result = response.data
-
-      if (response.status === 200) {
-        setData(result)
+      if (response && response.data) {
+        const result = response.data
+        if (response.status === 200) {
+          setData(result)
+        }
+      } else {
+        toast.error("Failed to fetch insights")
       }
 
     } catch (err) {
